@@ -7,11 +7,11 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     files: [
-      {pattern: './config/karma-test-shim.js', watched: false}
+      {pattern: './karma-test-shim.js', watched: false}
     ],
 
     preprocessors: {
-      './config/karma-test-shim.js': ['webpack', 'sourcemap']
+      './karma-test-shim.js': ['webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,
@@ -30,7 +30,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: false,
     browsers: ['Chrome'],
-    singleRun: true
+    singleRun: false
   };
 
   config.set(_config);
